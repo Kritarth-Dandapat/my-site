@@ -1,0 +1,281 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+
+% Color scheme
+% Color scheme
+\definecolor{primary}{RGB}{60, 80, 100} % Dark Slate Blue
+\definecolor{dark}{RGB}{51, 51, 51}
+
+% Section formatting
+\titleformat{\section}
+    {\large\bfseries\color{dark}}
+    {}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{8pt}
+
+% Custom commands
+\newcommand{\entry}[4]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill #4 \\
+}
+
+\newcommand{\skill}[1]{\textbf{#1}}
+
+% Document setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary
+}
+
+% Reduce spacing
+\setlength{\parskip}{2pt}
+\setlength{\itemsep}{4pt}
+\setlength{\topsep}{4pt}
+\setlength{\parsep}{0pt}
+\setlength{\partopsep}{0pt}
+\setlist[itemize]{leftmargin=1.1em}
+
+\begin{document}
+
+% Header (large, 2 lines, with all links)
+\begin{center}
+    {\LARGE\bfseries\color{dark} Kritarth Dandapat} \\
+    {\small Incoming PhD Student @ MSU $\cdot$ contact@dkritarth.com $\cdot$ +1 (716) 612-0016 $\cdot$ Buffalo, NY $\cdot$ \href{https://github.com/Kritarth-Dandapat}{github.com/Kritarth-Dandapat} $\cdot$ \href{https://www.linkedin.com/in/kritarth-dandapat/}{linkedin.com/in/kritarth-dandapat} $\cdot$ \href{https://dkritarth.com/}{dkritarth.com}}
+\end{center}
+\vspace{0.2em}
+
+\section*{Professional Summary}
+\noindent
+Incoming \textbf{PhD Student in Computer Science} at Michigan State University with a focus on \textbf{Artificial Intelligence}. Accomplished researcher specializing in \textbf{Computer Vision}, \textbf{Deep Learning}, and \textbf{Healthcare AI}. Recipient of the \textbf{PEARL Research Award} and current \textbf{Teaching Assistant} for Computer Architecture. Proven track record in developing mobile health diagnostics (\textbf{OralScan}) and symmetry-aware GNNs for material science. Graduating from an \textbf{accelerated 3-year BS program} with a \textbf{3.8+ GPA}.
+
+
+\section*{Education}
+\noindent
+\textbf{PhD in Computer Science} \hfill Starting Fall 2026 \\
+\textit{Michigan State University} \hfill East Lansing, MI
+\begin{itemize}[nosep]
+    \item Focus: Artificial Intelligence and Machine Learning
+    \item Advisor: Dr. Pang-Ning Tan
+\end{itemize}
+
+\vspace{0.6em}
+
+\noindent
+\textbf{Bachelor of Science in Computer Science} \hfill August 2023 -- June 2026 \\
+\textit{University at Buffalo, SUNY} \hfill Buffalo, NY
+
+\vspace{0.2em}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} lr}
+    Minor in Statistics & GPA: 3.8+ (Dean's List: All Semesters) \\
+    Presidential Scholarship: \$15,000 per annum & \textbf{(Accelerated 3-year program)} \\
+    PEARL Award: \$2,500 Research Grant (ELN) & \\
+\end{tabular*}
+
+\section*{Research Experience}
+
+\noindent
+\textbf{Research Assistant} \hfill \textit{June 2024 - Present} \\
+\noindent
+\textit{Embedded Sensing and Computing (ESC) Group, University at Buffalo} \hfill Buffalo, NY
+\begin{itemize}[nosep]
+    \item Developing \textbf{\href{https://oralscan.health/}{OralScan}}, a mobile application using a \textbf{YOLOv8 model} for real-time dental \textbf{disease classification} and \textbf{tooth numbering} from intraoral images.
+    \item Building mobile and web applications using React Native and React for healthcare diagnostics.
+    \item \textbf{Co-authored a paper} on the system's formative usability and acceptability study, submitted to the \textit{Smart Health} journal.
+    \item Currently developing an \textbf{orthodontics extension} to \textbf{track patient braces movements} and classify braces types using \textbf{YOLO-based models}.
+    \item Creating deep learning models for accurate orthodontic scoring using depth sensors.
+    \item Contributed to the development of \textbf{\href{https://mrehab.agency/}{mRehab}}, assisting with \textbf{mobile application architecture} and refining \textbf{exercise algorithms} for rehabilitation therapy.
+\end{itemize}
+
+
+\noindent
+\textbf{Undergraduate Researcher} \hfill \textit{June 2025 - Present} \\
+\noindent
+\textit{Peng Research Lab, University at Buffalo} \hfill Buffalo, NY
+\begin{itemize}[nosep]
+    \item Conducting research on \textbf{symmetry-aware graph neural networks (GNNs)} for crystalline materials, contributing to work detailed in \textbf{arXiv:2409.13851}.
+    \item \textbf{Migrated} the lab's model tracking and \textbf{hyperparameter optimization workflows} from SigOpt to \textbf{Weights \& Biases (wandb)} for final paper revisions.
+    \item \textbf{Benchmarked} and trained models on new GNN architectures, including \textbf{ALIGNN}, to evaluate performance for resubmission.
+    \item Contributed to a recent commentary paper on \textbf{agentic AI for catalyst discovery} (Peng et al., 2025, ChemRxiv).
+    \item Collaborating with graduate students on high-throughput atomistic simulations and data pipelines.
+\end{itemize}
+
+
+
+\section*{Professional Experience}
+
+\noindent
+\textbf{Teaching Assistant (CSE 341: Computer Architecture)} \hfill \textit{Jan 2026 - May 2026} \\
+\noindent
+\textit{Department of Computer Science \& Engineering, University at Buffalo} \hfill Buffalo, NY
+\begin{itemize}[nosep]
+    \item Conduct independent weekly recitation sessions and office hours to support students with VHDL, course material, and projects.
+    \item Grade midterms, finals, quizzes, and assignments, and assist in the preparation of course assessments.
+    \item Provide student support via Piazza and collaborate with the teaching team in weekly meetings.
+\end{itemize}
+\vspace{2em}
+
+
+\noindent
+\textbf{Tutor \& Peer-Assisted Leader} \hfill \textit{August 2024 - December 2025} \\
+\noindent
+\textit{Tutoring \& Academic Support Services, University at Buffalo} \hfill Buffalo, NY
+\begin{itemize}[nosep]
+    \item Conducting two interactive 1-hour sessions per week, improving students' understanding of Statistics by 30\% based on quiz performance and feedback
+    \item Providing in-depth explanations, answering student queries, and reinforcing key concepts during PAL sessions
+    \item Serving as both a tutor and Peer-Assisted Learning (PAL) leader, helping students master statistical concepts
+\end{itemize}
+
+\noindent
+\textbf{Founder \& Vice President (NSDC)} \hfill \textit{October 2023 - May 2024} \\
+\noindent
+\textit{UB National Student Data Corps} \hfill Buffalo, NY
+\begin{itemize}[nosep]
+    \item Led the development and launch of the NSDC website, improving event coordination and communication
+    \item Co-founded and led the University at Buffalo chapter of the National Student Data Corps
+    \item Planned and executed various data science workshops and networking events, establishing a strong network of data science enthusiasts at UB.
+\end{itemize}
+
+\section*{Technical Projects}
+\noindent
+\textbf{Marine Guardian: Ship Detection in Satellite Imagery} \hfill \textit{Computer Vision \& Deep Learning}
+\noindent
+\begin{itemize}[nosep]
+    \item Developed computer vision system for detecting ships using first principles of computer vision
+    \item Implemented roundness-based classification achieving \textbf{98.72\% accuracy with MobileNetV2}
+    \item Created fast detection algorithm using geometric properties for real-time maritime monitoring
+    \item Used transfer learning with pre-trained EfficientNet as encoder with custom decoder
+    \item Technologies: Python, OpenCV, TensorFlow, EfficientNet, MobileNetV2, ResNet50, KMeans
+\end{itemize}
+
+% \noindent
+% \textbf{OralScan: AI-Powered Dental Care} \hfill \textit{Healthcare AI \& Mobile Development}
+% \noindent
+% \begin{itemize}[nosep]
+%     \item Developed mobile and web app for accessible, AI-driven oral health diagnostics and care recommendations
+%     \item Built React Native mobile app and React web dashboard for real-time dental screening
+%     \item Integrated \textbf{YOLOv8} for disease/tooth detection and \textbf{ResNet50-based CNNs} for image analysis
+%     \item Empowered seniors and underserved communities with real-time, at-home dental screening
+%     \item Implemented guided camera system for easy image capture and secure server for data storage
+%     \item Technologies: React Native, React, Python, \textbf{YOLOv8}, ResNet50, Secure Server
+% \end{itemize}
+
+\noindent
+\textbf{People Counting using CSRNet} \hfill \textit{Deep Learning \& Computer Vision}
+\noindent
+\begin{itemize}[nosep]
+    \item Developed deep learning system for accurate people counting in dense crowd scenarios
+    \item Implemented CSRNet architecture to handle occlusions and improve detection robustness
+    \item Technologies: PyTorch, CSRNet, Computer Vision, CUDA, OpenCV
+\end{itemize}
+
+\noindent
+\textbf{Human Emotion Detection} \hfill \textit{Computer Vision \& AI}
+\noindent
+\begin{itemize}[nosep]
+    \item Engineered emotion detection system leveraging CNN, ResNet-34, and Vision Transformer (ViT)
+    \item Achieved 87.5\% accuracy in classifying human emotions from images
+    \item Technologies: PyTorch, TensorFlow, CNN, ResNet-34, Vision Transformer, OpenCV
+\end{itemize}
+
+% \noindent
+% \textbf{Pathfinding Visualizer} \hfill \textit{Algorithm Visualization}
+% \noindent
+% \begin{itemize}[nosep]
+%     \item Developed interactive pathfinding visualizer in Python using Pygame
+%     \item Implemented A* search algorithm for real-time visualization with customizable grid-based interface
+%     \item Technologies: Python, Pygame, A* Algorithm, Data Structures
+% \end{itemize}
+
+% \noindent
+% \textbf{Personalized Student Shell (PSS)} \hfill \textit{Command Line Interface}
+% \noindent
+% \begin{itemize}[nosep]
+%     \item Designed command-line shell to enhance student workflow with custom aliases and command history
+%     \item Implemented auto-completion, code execution, tutorials, and gamification elements
+%     \item Technologies: Python, SQLite, JSON, CLI, Gamification
+% \end{itemize}
+
+% \noindent
+% \textbf{UB Hacking Classifier Web App} \hfill \textit{Web Development}
+% \noindent
+% \begin{itemize}[nosep]
+%     \item Co-developed Classifier Web App during a hackathon, focusing on backend and database architecture
+%     \item Built responsive front-end using ReactJS, MUI, and CSS
+%     \item Technologies: React, MUI, Firebase, Node.js, Express.js
+% \end{itemize}
+
+\section*{Competitions \& Challenges}
+\noindent
+\begin{itemize}[nosep]
+    \item \textbf{Russell L. Agrusa CSE Student Innovation Competition} (November 2024) - Team Member, OralScan project
+    \item \textbf{Aging Innovations Challenge} (November 2024) - Team Member, OralScan project
+    \item \textbf{Community Champions for Disability Health Challenge} (October 2024) - PI, OralScan project
+\end{itemize}
+
+\section*{Research Presentations}
+\noindent
+\begin{itemize}[nosep]
+    \item \textbf{Oral Presentation and Demo} - CTSI Research Group of Doctors, Nurses, and Medical Students (April 2024)
+    \item \textbf{Oral Presentation} - SUNY Undergraduate Research Conference (SURC) (April 2024)
+\end{itemize}
+
+\section*{Publications \& Preprints}
+\begin{itemize}[nosep]
+    \item Soni, P., \textbf{Dandapat, K.}, Gherardi, A., Bo, W., Li, R., \& Xu, W. (2025). "OralScan, an AI-Powered Mobile Tool for Geriatric Oral Healthcare: A Formative Usability and Acceptability Study." (Submitted to \textit{Smart Health}).
+    \item Peng, J., Liu, C., Luo, Y., \& \textbf{Dandapat, K.} (2025). "Accelerating Multimetallic Catalyst Discovery with Robotics and Agentic AI." \textit{ChemRxiv}, ver. 1. DOI: 10.26434/chemrxiv-2025-13n3f.
+    \item Peng, J., et al. (2024). "Learning Ordering in Crystalline Materials with Symmetry-Aware Graph Neural Networks." \textit{arXiv Preprint}, arXiv:2409.13851. (Contributed to revisions and benchmarking).
+\end{itemize}
+
+\section*{Honors \& Awards}
+\noindent
+\begin{itemize}[nosep]
+    \item \textbf{PEARL Award:} Won competitive \$2,500 grant from UB Experiential Learning Network (ELN) for advanced research (November 2025)
+    \item \textbf{Cybersecurity Excellence:} Qualified for Top 100 in the World, Northeastern Cybersecurity C2C Finals, Placed 10th in the final, 2025
+    \item \textbf{Collegiate Lockdown:} Top Two Teams Representing UB, Placed 4th in Finals, 2025
+    \item \textbf{Dean's List:} University at Buffalo (Fall 2023, Spring 2024, Fall 2024)
+    \item \textbf{Presidential Scholarship:} Awarded \$15,000 per annum
+\end{itemize}
+
+\section*{Certifications \& Credentials}
+\noindent
+\begin{itemize}[nosep]
+    \item \textbf{Machine Learning Specialization} - Stanford University \& DeepLearning.AI (Coursera)
+    \item \textbf{Deep Learning Specialization} - Stanford University \& DeepLearning.AI (Coursera)
+    \item \textbf{PyTorch for Deep Learning} - Udemy Certificate
+    \item \textbf{Deep Learning Masterclass} - TensorFlow 2, Neural.ai
+    \item \textbf{Django Masterclass} - Tim Buchalka (Udemy Certificate)
+    \item \textbf{Node.js, Express, MongoDB} - Jonas Schmedtmann (Udemy Certificate)
+    \item \textbf{The Ultimate React Course 2023} - Jonas Schmedtmann (Udemy Certificate)
+    \item \textbf{Python Programming Masterclass} - Tim Buchalka (Udemy Certificate)
+\end{itemize}
+
+\section*{Technical Skills}
+\noindent
+\begin{itemize}[nosep]
+    \item \skill{Programming Languages:} Python, JavaScript, Java, C++, Rust
+    \item \skill{AI/ML Frameworks:} PyTorch, TensorFlow, Computer Vision, Deep Learning, CNN, ResNet, Vision Transformer
+    \item \skill{Web Development:} React, React Native, Node.js, Django, Express.js
+    \item \skill{Databases:} MongoDB, SQL, Firebase, SQLite
+    \item \skill{Tools \& Libraries:} Git, CUDA, OpenCV, NumPy, Matplotlib, Pygame
+    \item \skill{Cloud \& Deployment:} Firebase Hosting, Google Colab
+\end{itemize}
+
+\section*{Research Interests}
+\noindent
+\begin{itemize}[nosep]
+    \item Artificial Intelligence and Machine Learning
+    \item Computer Vision and Deep Learning
+    \item Healthcare Technology and Digital Health
+    \item Quantum Computing Applications
+    \item Energy Systems Optimization
+    \item Mobile and Web Development
+\end{itemize}
+
+\end{document}s

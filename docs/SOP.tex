@@ -1,0 +1,86 @@
+\documentclass[12pt, letterpaper]{article}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc} % Handle UTF-8 characters
+\usepackage[T1]{fontenc}    % Font encoding
+\usepackage[margin=1in]{geometry} % Set 1-inch margins
+\usepackage{lmodern}        % Use a modern font
+\usepackage{parskip}        % Use space between paragraphs instead of indentation
+
+% For hyperlinks
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue, citecolor=black]{hyperref}
+\usepackage{url}            % Better handling of URLs
+
+% --- DOCUMENT START ---
+\begin{document}
+
+% Title
+\centerline{\Large\textbf{Statement of Purpose}}
+\vspace{1em} % Add a bit of space after the title
+
+% --- BODY TEXT ---
+
+My academic journey has been driven by a fascination with the power of artificial intelligence (AI) to solve tangible, human-centric problems. For me, pursuing a Ph.D. is the next obvious career option and an essential step towards the enrichment of knowledge and its application.
+
+My undergraduate research has built a strong foundation, but I am now driven to move beyond applying known techniques and to begin \textbf{creating original, and high-impact research}. A doctoral program will provide the rigorous training and mentorship necessary to strengthen my technical expertise, deepen my theoretical knowledge, and develop the independent research skills required to contribute meaningfully to the fields of AI and computational science. My skill sets have been built over a period of time, through personal projects and two key undergraduate research experiences at the University at Buffalo.
+
+My initial interest in research was sparked by early-stage computer vision projects, such as ship detection in satellite imagery, where I achieved \textbf{98\% accuracy} using MobileNetV2 (Sandler et al., 2018). This project gave me a foundation in Convolutional Neural Networks (CNNs) and Vision Transformers, but I was eager to apply these skills to more complex, and real-world problems.
+
+% --- RESEARCH EXP 1 ---
+My first research experience was with \href{https://cse.buffalo.edu/~wenyaoxu/index.html}{Professor Wenyao Xu}’s \href{https://cse.buffalo.edu/~wenyaoxu/esc.html}{ESC Lab}, where I joined a project to build an AI-driven healthcare system for dental patients. I contributed to the development of a mobile application, \textbf{OralScan}, which utilizes a \textbf{YOLOv8 model} (built on the principles of Redmon et al., 2016) for real-time disease classification and tooth numbering from intraoral images. We then conducted a formative usability and acceptability study to assess its potential for real-world geriatric oral healthcare, which led to a \textbf{co-authored submission to the \textit{Smart Health} journal} (Soni et al., 2025, awaiting review). Currently, I am working on an orthodontics extension of this project, developing an algorithm to track patient braces movements from images and building a separate YOLO-based model for braces classification. Through this project, I learned that technical accuracy is only one part of a solution; however, a successful system must be built on a deep understanding of specialists’ and patients’ true needs.
+
+% --- RESEARCH EXP 2 ---
+My second research experience has been with \href{https://ubwp.buffalo.edu/jiayu-peng-lab/jiayu/}{Professor Jiayu Peng}’s lab, which centers on developing and refining \textbf{symmetry-aware Graph Neural Networks (GNNs)} for crystalline materials. I have been fortunate to be involved in the work detailed in the "PerovskiteOrderingGCNNs" preprint (Peng, 2024; arXiv:2409.13851). For its final revision, my role involved migrating the team’s hyperparameter optimization workflows from SigOpt to \textbf{Weights \& Biases (wandb)} to enable more reproducible, large-scale training. I also assisted in benchmarking by training new GNN architectures, such as the Atomistic Line Graph Neural Network (ALIGNN) (Choubey et al., 2024), on our dataset. Under Professor Peng's mentorship, I successfully secured the \textbf{PEARL Award} in November 2025. This competitive \$2,500 grant is awarded by the UB Experiential Learning Network (ELN) specifically to fund advanced undergraduate research projects. This experience culminated in a recent commentary on \textbf{agentic AI for catalyst discovery} (Peng et al., 2025, ChemRxiv), showing me the power of deep learning to uncover scientific insights in complex physical systems.
+
+I am confident in my ability to handle the rigor of a Ph.D. program. I have consistently sought out academic challenges, graduating high school a year early and on track to complete my \textbf{undergraduate degree in just three years at the age of 19}. I have managed this accelerated path while concurrently opting for 21-22 credit per semester which is an additional 6 to 7 credit allowed in favour of me by virtue of being an Honors student, maintaining a \textbf{GPA of 3.8 and above}, featuring in the Dean's List throughout the undergraduate program.
+
+\textbf{Working in two different research labs simultaneously}, and holding a statistics tutoring position at the university, has not only taught me to manage my time effectively but has also proven my endurance and capacity for the sustained, high-level effort required for a successful research career.
+
+% ----- Specific ending (Commented Out) -----------
+% I am particularly drawn to the Ph.D. program at \textbf{Purdue} because its research focus aligns perfectly with my interests. I am particularly drawn to the work of \textbf{Professor Raymond A. Yeh} on \textbf{computer vision and NLP}. I am eager to bring my experience in \textbf{Artificial Intelligence and Statistics} to this research, while also \textbf{ deepening my understanding of foundational models and other related topics}. I believe my background in both real-world application and core model development would allow me to begin contributing to research.
+
+% --- GENERALIZED ENDING ---
+I am particularly drawn to this Ph.D. program because the department's commitment to cutting-edge research aligns perfectly with my academic goals. I am eager to bring my experience in Artificial Intelligence and Statistics to the program, while deepening my understanding of foundational models and emerging technologies. I believe my background in both real-world application and core model development will allow me to integrate seamlessly into the department and contribute meaningfully to its research endeavors.
+
+% --- REFERENCES ---
+
+% Using \section* to create unnumbered sections
+\section*{My Research Outputs and Collaborators}
+\begin{thebibliography}{9}
+
+\bibitem{Peng2025}
+Peng, J., Liu, C., Luo, Y., \& Dandapat, K. (2025). Accelerating Multimetallic Catalyst Discovery with Robotics and Agentic AI. \textit{ChemRxiv, ver. 1.} DOI: 10.26434/chemrxiv-2025-13n3f. \url{https://chemrxiv.org/engage/chemrxiv/article-details/68f6c2593e6156d3be0d74cf}
+
+\bibitem{Peng2024}
+Peng, J., (2024). PerovskiteOrderingGCNNs (arXiv Preprint). Available: \url{https://arxiv.org/abs/2409.13851}. GitHub \url{https://github.com/jiayu-peng-lab/PerovskiteOrderingGCNNs?tab=readme-ov-file}
+
+\bibitem{Soni2025}
+Soni, P., Dandapat, K., Gherardi, A., Bo, W., Li, R., \& Xu, W. (2025). OralScan, an AI-Powered Mobile Tool for Geriatric Oral Healthcare: A Formative Usability and Acceptability Study. \textit{Smart Health.} (Submitted, not yet peer-reviewed)
+
+\bibitem{XuHomepage}
+Wenyao Xu, Homepage. \url{https://cse.buffalo.edu/~wenyaoxu/index.html}
+
+\bibitem{ESCLab}
+ESC Lab, Homepage. \url{https://cse.buffalo.edu/~wenyaoxu/esc.html}
+
+\bibitem{PengHomepage}
+Jiayu Peng, Homepage. \url{https://ubwp.buffalo.edu/jiayu-peng-lab/jiayu/}
+
+\end{thebibliography}
+
+\section*{General Academic References}
+\begin{thebibliography}{9}
+
+\bibitem{Choubey2024}
+Choubey, S., Bhatt, V. S. R., \& Chen, W. (2024). ALIGNN: a comprehensive atomistic line graph neural network for material property prediction. \textit{npj Computational Materials, 10}(1), 1-11.
+
+\bibitem{Redmon2016}
+Redmon, J., Divvala, S., Girshick, R., \& Farhadi, A. (2016). You Only Look Once: Unified, RealTime Object Detection. \textit{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).}
+
+\bibitem{Sandler2018}
+Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., \& Chen, L. C. (2018). MobileNetV2: Inverted Residuals and Linear Bottlenecks. \textit{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).}
+
+\end{thebibliography}
+
+% --- DOCUMENT END ---
+\end{document}
