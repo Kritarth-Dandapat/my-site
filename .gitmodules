@@ -1,3 +1,6 @@
 [submodule "portfolio"]
 	path = portfolio
 	url = https://github.com/Kritarth-Dandapat/portfolio.git
+[submodule "notebook"]
+	path = notebook
+	url = https://github.com/Kritarth-Dandapat/notebook.git
