@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 # Start hub, notebook (static), and portfolio (Vite) for local preview.
+# Writes local-preview-ports.json so hub + notebook rewrite links to localhost.
+# Portfolio reads the same ports via VITE_* environment variables.
+#
 # Usage: ./scripts/serve-all.sh
-# Env:   HUB_PORT=8081 NOTEBOOK_PORT=8082 (optional overrides)
+# Env:   HUB_PORT=8081 NOTEBOOK_PORT=8082 PORTFOLIO_PORT=3000
 
 set -euo pipefail
 
@@ -10,7 +13,15 @@ HUB_PORT="${HUB_PORT:-8081}"
 NOTEBOOK_PORT="${NOTEBOOK_PORT:-8082}"
 PORTFOLIO_PORT="${PORTFOLIO_PORT:-3000}"
 
+PORTS_JSON="$ROOT/hub/local-preview-ports.json"
+PORTS_JSON_NB="$ROOT/notebook/local-preview-ports.json"
+
 PIDS=()
+
+write_port_files() {
+  printf '{"hub":%s,"notebook":%s,"portfolio":%s}\n' "$HUB_PORT" "$NOTEBOOK_PORT" "$PORTFOLIO_PORT" >"$PORTS_JSON"
+  cp "$PORTS_JSON" "$PORTS_JSON_NB"
+}
 
 cleanup() {
   echo ""
@@ -18,6 +29,7 @@ cleanup() {
   for pid in "${PIDS[@]}"; do
     kill "$pid" 2>/dev/null || true
   done
+  rm -f "$PORTS_JSON" "$PORTS_JSON_NB"
 }
 
 trap cleanup EXIT INT TERM HUP
@@ -26,6 +38,8 @@ if ! command -v python3 &>/dev/null; then
   echo "error: python3 is required to serve hub and notebook."
   exit 1
 fi
+
+write_port_files
 
 cd "$ROOT/hub"
 python3 -m http.server "$HUB_PORT" --bind 127.0.0.1 &
@@ -36,7 +50,13 @@ python3 -m http.server "$NOTEBOOK_PORT" --bind 127.0.0.1 &
 PIDS+=($!)
 
 if command -v npm &>/dev/null; then
-  (cd "$ROOT/portfolio" && npm run dev -- --port "$PORTFOLIO_PORT" --host 127.0.0.1) &
+  (
+    cd "$ROOT/portfolio"
+    export VITE_LOCAL_HUB_PORT="$HUB_PORT"
+    export VITE_LOCAL_NOTEBOOK_PORT="$NOTEBOOK_PORT"
+    export VITE_LOCAL_PORTFOLIO_PORT="$PORTFOLIO_PORT"
+    npm run dev -- --port "$PORTFOLIO_PORT" --host 127.0.0.1
+  ) &
   PIDS+=($!)
   PORTFOLIO_OK=1
 else
@@ -54,8 +74,9 @@ if [[ "${PORTFOLIO_OK}" -eq 1 ]]; then
 fi
 echo "  Notebook:  http://127.0.0.1:${NOTEBOOK_PORT}/"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "  Hub still links to production portfolio/notebook in nav cards;"
-echo "  use the URLs above for local copies. Ctrl+C stops servers."
+echo "  Cross-links use these localhost URLs while hostname is 127.0.0.1."
+echo "  Port overrides: HUB_PORT, NOTEBOOK_PORT, PORTFOLIO_PORT (rewrite serve-all first)."
+echo "  Ctrl+C stops servers and removes local-preview-ports.json files."
 echo ""
 
 if [[ "$(uname -s)" == "Darwin" ]]; then

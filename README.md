@@ -78,7 +78,11 @@ From the repo root (needs **Python 3** and **npm** for the portfolio):
 ./scripts/serve-all.sh
 ```
 
-Defaults: hub **8081**, notebook **8082**, portfolio **3000** (override with `HUB_PORT`, `NOTEBOOK_PORT`, `PORTFOLIO_PORT`). On macOS, three browser tabs open automatically. The hub page still uses production URLs in some links; use the printed localhost URLs for each local copy.
+Defaults: hub **8081**, notebook **8082**, portfolio **3000** (override with `HUB_PORT`, `NOTEBOOK_PORT`, `PORTFOLIO_PORT`). The script writes `hub/local-preview-ports.json` and `notebook/local-preview-ports.json` (gitignored) and passes matching `VITE_LOCAL_*` vars into Vite so **Hub, Notebook, and Portfolio** all link to each other on `127.0.0.1` instead of production. On macOS, three browser tabs open automatically. Stopping the script deletes the JSON files.
+
+If you run the three servers manually, either copy the same ports into those JSON files or rely on the built-in defaults (8081 / 8082 / 3000) for hub and notebook scripts; for the portfolio run:
+
+`VITE_LOCAL_HUB_PORT=8081 VITE_LOCAL_NOTEBOOK_PORT=8082 VITE_LOCAL_PORTFOLIO_PORT=3000 npm run dev`
 
 ### Notebook (local)
 
