@@ -26,7 +26,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site/configs
-          cp hub/index.html hub/hub.css hub/CNAME _site/
+          cp hub/index.html hub/hub.css hub/CNAME hub/robots.txt hub/sitemap.xml _site/
           if [ -d config ] && [ -n "$(ls -A config 2>/dev/null)" ]; then
             rsync -a --delete config/ _site/configs/
           fi
