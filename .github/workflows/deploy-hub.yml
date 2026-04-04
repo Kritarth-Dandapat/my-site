@@ -1,0 +1,46 @@
+name: Deploy hub to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'hub/**'
+      - 'config/**'
+      - '.github/workflows/deploy-hub.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-hub
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        run: |
+          mkdir -p _site/configs
+          cp hub/index.html hub/hub.css hub/CNAME _site/
+          if [ -d config ] && [ -n "$(ls -A config 2>/dev/null)" ]; then
+            rsync -a --delete config/ _site/configs/
+          fi
+          cp hub/configs/index.html _site/configs/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

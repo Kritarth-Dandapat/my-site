@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configs · dkritarth.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../hub.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../" class="logo" style="text-decoration:none;color:inherit">← Hub</a>
+    <nav class="nav">
+      <a href="https://portfolio.dkritarth.com">Portfolio</a>
+      <a href="https://notebook.dkritarth.com">Notebook</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1>Configs</h1>
+    <p class="lede">
+      Dotfiles mirrored from the <code>config/</code> tree in
+      <a href="https://github.com/Kritarth-Dandapat/my-site">my-site</a>. Open raw files in the browser or use “Save link as…” to download.
+    </p>
+
+    <section class="file-section">
+      <h2>Shell &amp; tools</h2>
+      <ul class="file-list">
+        <li><a href="zshrc" download>zshrc</a></li>
+        <li><a href="p10k.zsh" download>p10k.zsh</a></li>
+        <li><a href="nanorc" download>nanorc</a></li>
+      </ul>
+    </section>
+
+    <section class="file-section">
+      <h2>Neovim</h2>
+      <ul class="file-list">
+        <li><a href="nvim/init.lua" download>nvim/init.lua</a></li>
+        <li><a href="nvim/lazy-lock.json" download>nvim/lazy-lock.json</a></li>
+        <li><a href="nvim/lua/plugins/init.lua" download>nvim/lua/plugins/init.lua</a></li>
+        <li><a href="nvim/lua/config/autocmds.lua" download>nvim/lua/config/autocmds.lua</a></li>
+        <li><a href="nvim/lua/config/keymaps.lua" download>nvim/lua/config/keymaps.lua</a></li>
+        <li><a href="nvim/lua/config/options.lua" download>nvim/lua/config/options.lua</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="../">Home</a>
+    ·
+    <a href="https://github.com/Kritarth-Dandapat/my-site/tree/master/config">Source on GitHub</a>
+  </footer>
+
+  <style>
+    code { font-size: 0.9em; background: #e2e8f0; padding: 0.1em 0.35em; border-radius: 4px; }
+    .file-section { margin-bottom: 2rem; }
+    .file-section h2 { font-size: 1rem; font-weight: 600; margin: 0 0 0.75rem; color: #0f172a; }
+    .file-list { list-style: none; padding: 0; margin: 0; }
+    .file-list li { margin-bottom: 0.5rem; }
+    .file-list a { color: #0284c7; font-weight: 500; text-decoration: none; }
+    .file-list a:hover { text-decoration: underline; }
+  </style>
+</body>
+</html>

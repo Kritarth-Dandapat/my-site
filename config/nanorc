@@ -1,0 +1,39 @@
+# Nano — user config (repo: my-site/config/nanorc)
+# Symlink: ln -sf /path/to/my-site/config/nanorc ~/.nanorc
+
+set linenumbers
+set constantshow
+set softwrap
+set atblanks
+set tabsize 4
+set tabstospaces
+set autoindent
+set mouse
+set smarthome
+set quickblank
+set trimblanks
+set historylog
+set positionlog
+set casesensitive
+set regexp
+set nowrap
+set guidestripe 80
+set whitespace "»·"
+set matchbrackets "(<[{)>]}"
+
+set titlecolor brightwhite,blue
+set statuscolor brightwhite,green
+set errorcolor brightwhite,red
+set selectedcolor brightwhite,magenta
+set numbercolor cyan
+set keycolor brightcyan
+set functioncolor brightgreen
+
+bind ^S savefile main
+bind ^Q exit main
+bind ^H chopwordleft main
+bind ^L chopwordright main
+
+## Syntax highlighting (GNU nano from Homebrew: brew install nano)
+include "/opt/homebrew/share/nano/*.nanorc"
+include "/opt/homebrew/share/nano/extra/*.nanorc"
