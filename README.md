@@ -70,6 +70,16 @@ npm install
 npm run dev
 ```
 
+### Preview all three locally
+
+From the repo root (needs **Python 3** and **npm** for the portfolio):
+
+```bash
+./scripts/serve-all.sh
+```
+
+Defaults: hub **8081**, notebook **8082**, portfolio **3000** (override with `HUB_PORT`, `NOTEBOOK_PORT`, `PORTFOLIO_PORT`). On macOS, three browser tabs open automatically. The hub page still uses production URLs in some links; use the printed localhost URLs for each local copy.
+
 ### Notebook (local)
 
 Serve `notebook/` with any static server, or open `notebook/index.html`. See `notebook/CONTENT_GUIDE.md`.
