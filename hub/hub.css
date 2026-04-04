@@ -26,39 +26,82 @@ body {
   flex-direction: column;
 }
 
-.site-header {
+/* Full-width site chrome — distinct from portfolio (sky) and notebook (violet) */
+.hub-chrome {
+  width: 100%;
+  background: linear-gradient(90deg, #ecfdf5 0%, #d1fae5 100%);
+  border-bottom: 3px solid #059669;
+  box-shadow: 0 1px 0 rgba(5, 150, 105, 0.12);
+}
+
+.hub-chrome-inner {
   max-width: 56rem;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  border-bottom: 1px solid var(--border);
+  gap: 0.75rem 1.25rem;
 }
 
-.logo {
+.hub-site-pill {
+  display: inline-block;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #047857;
+  padding: 0.2rem 0.45rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.hub-brand-name {
   font-family: Merriweather, Georgia, serif;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  vertical-align: middle;
 }
 
-.nav {
+.hub-chrome-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.8125rem;
 }
 
-.nav a {
-  color: var(--muted);
+.hub-chrome-caption {
+  color: #047857;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  margin-right: 0.35rem;
+}
+
+.hub-chrome-nav a {
+  color: #0f766e;
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
 }
 
-.nav a:hover {
-  color: var(--accent);
+.hub-chrome-nav a:hover {
+  background: rgba(5, 150, 105, 0.12);
+  color: #065f46;
+}
+
+.hub-chrome-dot {
+  color: #6ee7b7;
+  user-select: none;
 }
 
 .main {
